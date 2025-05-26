@@ -198,11 +198,11 @@ function MewModel() {
 
 export default function Mew() {
   return (
-    <div className="pikachu-container">
+    <div className="mew-container">
       <div className="content-wrapper">
         <h2 className="title">Mew</h2>
         
-        <div className="pikachu-grid">
+        <div className="mew-grid">
           {/* Columna del modelo 3D */}
           <div className="model-column">
             <div className="canvas-container">
@@ -248,13 +248,13 @@ export default function Mew() {
                 />
                 
                 <Stars 
-                  radius={100} 
-                  depth={50} 
-                  count={5000} 
-                  factor={4} 
-                  saturation={0} 
-                  fade 
-                  speed={1.5}
+                  radius={100}
+                  depth={50}
+                  count={5000}
+                  factor={4}
+                  saturation={0}
+                  fade
+                  speed={1}
                 />
               </Canvas>
             </div>
@@ -277,9 +277,9 @@ export default function Mew() {
             <div className="info-section">
               <h3>Objetos Equipados en Estado Salvaje</h3>
               <ul>
-                <li>Bayamarga (intercambiado de R/A/Am a O/P/C)</li>
-                <li>Baya Milagro (5% O/P/C)</li>
-                <li>Baya Ziuela (100% R/Z/E/D/P/Pt/HG/SS/N/B/N2/B2/S/L/US/UL)</li>
+                <li>Bayamarga (5%)</li>
+                <li>Baya Milagro (5%)</li>
+                <li>Baya Ziuela (5%)</li>
               </ul>
             </div>
 

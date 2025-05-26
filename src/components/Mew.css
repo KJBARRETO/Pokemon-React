@@ -1,4 +1,4 @@
-.pikachu-container {
+.mew-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   position: relative;
@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 
-.pikachu-container::before {
+.mew-container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -44,7 +44,7 @@
   text-align: center;
 }
 
-.pikachu-grid {
+.mew-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -177,7 +177,7 @@
 }
 
 /* Efecto de partículas en el fondo */
-.pikachu-container::after {
+.mew-container::after {
   content: '';
   position: absolute;
   top: 0;
@@ -203,7 +203,7 @@
 
 /* Responsive design */
 @media (max-width: 1024px) {
-  .pikachu-grid {
+  .mew-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
