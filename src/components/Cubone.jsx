@@ -1,8 +1,9 @@
 // src/components/Cubone.jsx
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, useGLTF, Stars } from '@react-three/drei'
-import { useRef, useState } from 'react'
+import { useRef, Suspense } from 'react'
 import { useFrame } from '@react-three/fiber'
+import AudioPlayer from './AudioPlayer'
 import './Cubone.css'
 
 
@@ -23,43 +24,48 @@ function CuboneModel() {
 }
 
 export default function Cubone() {
-  const audio = useRef(new Audio('/music/cubone.mp3'))
-  const [isPlaying, setIsPlaying] = useState(false)
-
-  const toggleAudio = () => {
-    if (isPlaying) {
-      audio.current.pause()
-    } else {
-      audio.current.play()
-    }
-    setIsPlaying(!isPlaying)
-  }
-
   return (
     <div className="container mt-4 text-center">
       <h2>Cubone</h2>
-      <p>Cubone es un Pokémon huérfano que lleva el cráneo de su madre como casco, un símbolo de amor y recuerdo. Aunque llora su pérdida, su valentía y determinación lo hacen especial. Su historia nos recuerda que, incluso en la soledad y el dolor, podemos encontrar fuerza y esperanza.</p>
+      <p>
+        Cubone es un Pokémon de tipo tierra, conocido por llevar el cráneo de su madre fallecida.
+        Su triste historia y su valentía lo han convertido en uno de los Pokémon más queridos.
+        Utiliza su hueso como arma y su casco como protección.
+      </p>
 
       <div style={{ width: '100%', height: '400px' }}>
         <Canvas camera={{ position: [0, 1, 4], fov: 50 }}>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[5, 5, 5]} />
-          <CuboneModel />
-          <OrbitControls 
-            enablePan={false} 
-            enableZoom={false} 
-            minPolarAngle={Math.PI / 3} 
+          <color attach="background" args={['#1a1a1a']} />
+          
+          <ambientLight intensity={0.4} />
+          <directionalLight position={[5, 5, 5]} intensity={0.8} />
+          <directionalLight position={[-5, 5, -5]} intensity={0.6} />
+          <pointLight position={[0, 5, 0]} intensity={0.5} color="#8b4513" />
+          
+          <Suspense fallback={null}>
+            <CuboneModel />
+          </Suspense>
+
+          <OrbitControls
+            enablePan={false}
+            enableZoom={false}
+            minPolarAngle={Math.PI / 3}
             maxPolarAngle={Math.PI / 1.8}
           />
-          <Stars />
+          
+          <Stars 
+            radius={100} 
+            depth={50} 
+            count={5000} 
+            factor={4} 
+            saturation={0} 
+            fade 
+            speed={1.5}
+          />
         </Canvas>
       </div>
 
-      <div className="mt-3">
-        <button onClick={toggleAudio} className="btn btn-primary">
-          {isPlaying ? 'Pausar Música' : 'Reproducir Música'}
-        </button>
-      </div>
+      <AudioPlayer songPath="/music/Cancion.mp3" />
     </div>
   )
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="electric" x="0" y="0" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M32 0 L48 32 L32 64 L16 32 Z" fill="#ffd700" opacity="0.3"/>
+      <path d="M0 32 L32 48 L64 32 L32 16 Z" fill="#ffff00" opacity="0.2"/>
+      <circle cx="32" cy="32" r="8" fill="#ffd700" opacity="0.4"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="512" height="512" fill="#1a1a1a"/>
+  <rect width="512" height="512" fill="url(#electric)"/>
+  
+  <!-- Líneas eléctricas -->
+  <g filter="url(#glow)">
+    <path d="M0 128 L512 128" stroke="#ffd700" stroke-width="2" opacity="0.3"/>
+    <path d="M0 256 L512 256" stroke="#ffff00" stroke-width="2" opacity="0.3"/>
+    <path d="M0 384 L512 384" stroke="#ffd700" stroke-width="2" opacity="0.3"/>
+    <path d="M128 0 L128 512" stroke="#ffff00" stroke-width="2" opacity="0.3"/>
+    <path d="M256 0 L256 512" stroke="#ffd700" stroke-width="2" opacity="0.3"/>
+    <path d="M384 0 L384 512" stroke="#ffff00" stroke-width="2" opacity="0.3"/>
+  </g>
+  
+  <!-- Patrones de rayos -->
+  <g opacity="0.2">
+    <path d="M64 64 L96 96" stroke="#ffd700" stroke-width="3"/>
+    <path d="M128 128 L160 160" stroke="#ffff00" stroke-width="3"/>
+    <path d="M192 192 L224 224" stroke="#ffd700" stroke-width="3"/>
+    <path d="M256 256 L288 288" stroke="#ffff00" stroke-width="3"/>
+    <path d="M320 320 L352 352" stroke="#ffd700" stroke-width="3"/>
+    <path d="M384 384 L416 416" stroke="#ffff00" stroke-width="3"/>
+  </g>
+</svg> 
