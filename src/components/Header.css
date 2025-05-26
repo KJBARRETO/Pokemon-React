@@ -1,0 +1,24 @@
+/* Header.css */
+
+.navbar-brand,
+.nav-link {
+  font-family: 'Press Start 2P', cursive !important;
+  font-size: 0.85rem; /* Puedes ajustar el tamaño */
+  letter-spacing: 1.5px;
+}
+
+.navbar-brand {
+  font-size: 1rem;
+  color: #f5a623 !important; /* Naranja cálido para que resalte */
+  text-shadow: 1px 1px 3px #000000cc;
+}
+
+.nav-link {
+  color: #e0dede !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f5a623 !important;
+  text-shadow: 0 0 6px #f5a623cc;
+}

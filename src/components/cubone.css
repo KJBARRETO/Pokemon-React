@@ -1,0 +1,80 @@
+/* Cubone.css */
+
+.galaxy-background {
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+  background: radial-gradient(ellipse at center, #0d0d2b 0%, #000000 80%);
+  box-shadow: 0 0 30px 5px rgba(13, 13, 43, 0.7);
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  background: #12141d; /* fondo oscuro */
+  border-radius: 18px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 25px rgba(18, 20, 29, 0.9);
+  color: #e0dede; /* texto claro */
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  user-select: none;
+}
+
+h2 {
+  color: #f5a623; /* naranja cálido */
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin-bottom: 14px;
+  letter-spacing: 3px;
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.7),
+    0 0 8px #f5a623aa; /* brillo suave */
+}
+
+p {
+  font-size: 1.15rem;
+  color: #bfbfbf; /* gris claro */
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-weight: 500;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f5a623, #f76b1c);
+  color: #fff;
+  border: none;
+  padding: 14px 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 40px;
+  box-shadow: 0 6px 15px rgba(247, 107, 28, 0.7);
+  transition: background-color 0.3s ease, transform 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #f76b1c, #f5a623);
+  box-shadow: 0 8px 25px rgba(247, 107, 28, 0.9);
+  transform: scale(1.07);
+}
+
+.mt-3 {
+  margin-top: 1.5rem !important;
+}
+
+.galaxy-background {
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+  background: radial-gradient(ellipse at center, #0a0a14 0%, #000000 90%);
+  box-shadow: 0 0 40px 8px rgba(13, 13, 43, 0.9);
+  overflow: hidden;
+  position: relative;
+}

@@ -3,6 +3,8 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, useGLTF, Stars } from '@react-three/drei'
 import { useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
+import './Cubone.css'
+
 
 function CuboneModel() {
   const { scene } = useGLTF('/models/cubone.glb')
@@ -36,7 +38,7 @@ export default function Cubone() {
   return (
     <div className="container mt-4 text-center">
       <h2>Cubone</h2>
-      <p>Cubone es un Pokémon huérfano que usa el cráneo de su madre como casco. Su historia es muy emotiva y lo hace especial.</p>
+      <p>Cubone es un Pokémon huérfano que lleva el cráneo de su madre como casco, un símbolo de amor y recuerdo. Aunque llora su pérdida, su valentía y determinación lo hacen especial. Su historia nos recuerda que, incluso en la soledad y el dolor, podemos encontrar fuerza y esperanza.</p>
 
       <div style={{ width: '100%', height: '400px' }}>
         <Canvas camera={{ position: [0, 1, 4], fov: 50 }}>

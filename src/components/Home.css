@@ -1,0 +1,71 @@
+/* Home.css */
+
+.container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  border-radius: 20px;
+  box-shadow: 0 0 30px #5a5aaf88;
+  color: #eaeaff;
+  font-family: 'Orbitron', sans-serif;
+  user-select: none;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.5rem;
+  color: #ffcc33;
+  text-shadow: 0 0 10px #ffcc33aa, 0 0 20px #ffcc33bb;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #d9d9ff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #6666ccaa;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #ffcc33, #6655cc);
+  margin: 2rem 0;
+  border-radius: 5px;
+}
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.8rem;
+  color: #ffa500;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px #ffa500aa;
+}
+
+.card {
+  background: #262146dd;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #4444aaaa;
+  padding: 1.8rem 2rem;
+  color: #cfcfff;
+  font-weight: 500;
+  text-align: left;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.card strong {
+  color: #ffcc33;
+  text-shadow: 0 0 5px #ffcc33aa;
+}
+
+p.mt-4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  color: #e0e0ff;
+  text-shadow: 0 0 8px #7766ccaa;
+  margin-top: 2rem;
+}

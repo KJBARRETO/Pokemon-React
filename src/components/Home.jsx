@@ -1,26 +1,29 @@
-// src/components/Home.jsx
+import './Home.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Home() {
   return (
-    <div className="container mt-5 text-center">
-      <h1 className="mb-4">Bienvenidos a la Expo Multimedia</h1>
+    <div className="container">
+      <h1 className="mb-4">Bienvenidos a nuestra Exposicion de Pokemones</h1>
 
       <p className="lead">
-        Este proyecto presenta una experiencia interactiva con personajes 3D del universo Pokémon,
-        integrando animaciones, sonidos, luces, efectos visuales y un minijuego.
+        Vive una aventura interactiva con Pokémon en 3D. Este proyecto combina animaciones, luces
+        , sonidos y efectos visuales para dar vida a personajes del universo Pokémon en un entorno 
+        web envolvente. Además, incluye un emocionante minijuego.
       </p>
 
       <hr className="my-4" />
 
-      <h2 className="mt-4">¿Qué tecnologías se usaron?</h2>
-      <ul className="list-group list-group-flush my-3 text-start">
-        <li className="list-group-item"><strong>React</strong> – Para construir la interfaz de usuario.</li>
-        <li className="list-group-item"> <strong>React Router</strong> – Para la navegación entre componentes.</li>
-        <li className="list-group-item"> <strong>Three.js + @react-three/fiber</strong> – Para los personajes y escenarios 3D.</li>
-        <li className="list-group-item"><strong>Bootstrap</strong> – Para el diseño responsivo y estético.</li>
-        <li className="list-group-item"><strong>Vite</strong> – Como herramienta de desarrollo rápida.</li>
-      </ul>
+      <h2 className="text-center mb-4">Tecnologías que dan vida al proyecto</h2>
+      <div className="card shadow-lg border-0">
+        <div className="card-body">
+          <p><strong>React</strong> se encargó de construir una interfaz dinámica e interactiva.</p>
+          <p><strong>React Router</strong> nos permitió movernos fluida y rápidamente entre las distintas secciones del proyecto.</p>
+          <p><strong>Three.js + @react-three/fiber</strong> dieron vida a los personajes y escenarios 3D, con animaciones y efectos visuales en tiempo real.</p>
+          <p><strong>Bootstrap</strong> se utilizó para lograr un diseño limpio, adaptable y atractivo en todos los dispositivos.</p>
+          <p><strong>Vite</strong> fue nuestra herramienta clave para un entorno de desarrollo veloz y eficiente.</p>
+        </div>
+      </div>
 
       <p className="mt-4">¡Usa el menú de navegación para explorar a Cubone, Mew, Pikachu y jugar el minijuego!</p>
     </div>
