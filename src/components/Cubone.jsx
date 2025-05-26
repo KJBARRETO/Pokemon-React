@@ -6,8 +6,104 @@ import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import AudioPlayer from './AudioPlayer'
 import DustParticles from './DustParticles'
-import CuboneBase from './CuboneBase'
 import './Cubone.css'
+
+function Scene() {
+  return (
+    <group>
+      {/* Base principal */}
+      <Plane 
+        args={[10, 10]} 
+        rotation={[-Math.PI / 2, 0, 0]} 
+        position={[0, -1.5, 0]}
+      >
+        <meshStandardMaterial 
+          color="#8b4513"
+          metalness={0.5}
+          roughness={0.3}
+          emissive="#8b4513"
+          emissiveIntensity={0.2}
+        />
+      </Plane>
+
+      {/* Paredes del escenario */}
+      <Box args={[10, 0.5, 0.5]} position={[0, -1.25, -5]}>
+        <meshStandardMaterial 
+          color="#8b4513"
+          metalness={0.7}
+          roughness={0.2}
+          emissive="#8b4513"
+          emissiveIntensity={0.1}
+        />
+      </Box>
+      <Box args={[10, 0.5, 0.5]} position={[0, -1.25, 5]}>
+        <meshStandardMaterial 
+          color="#8b4513"
+          metalness={0.7}
+          roughness={0.2}
+          emissive="#8b4513"
+          emissiveIntensity={0.1}
+        />
+      </Box>
+      <Box args={[0.5, 0.5, 10]} position={[-5, -1.25, 0]}>
+        <meshStandardMaterial 
+          color="#8b4513"
+          metalness={0.7}
+          roughness={0.2}
+          emissive="#8b4513"
+          emissiveIntensity={0.1}
+        />
+      </Box>
+      <Box args={[0.5, 0.5, 10]} position={[5, -1.25, 0]}>
+        <meshStandardMaterial 
+          color="#8b4513"
+          metalness={0.7}
+          roughness={0.2}
+          emissive="#8b4513"
+          emissiveIntensity={0.1}
+        />
+      </Box>
+
+      {/* Elementos decorativos */}
+      <Box args={[0.3, 0.3, 0.3]} position={[-4, -1.35, -4]}>
+        <meshStandardMaterial 
+          color="#8b4513"
+          metalness={0.8}
+          roughness={0.2}
+          emissive="#8b4513"
+          emissiveIntensity={0.5}
+        />
+      </Box>
+      <Box args={[0.3, 0.3, 0.3]} position={[4, -1.35, 4]}>
+        <meshStandardMaterial 
+          color="#8b4513"
+          metalness={0.8}
+          roughness={0.2}
+          emissive="#8b4513"
+          emissiveIntensity={0.5}
+        />
+      </Box>
+      <Box args={[0.3, 0.3, 0.3]} position={[-4, -1.35, 4]}>
+        <meshStandardMaterial 
+          color="#8b4513"
+          metalness={0.8}
+          roughness={0.2}
+          emissive="#8b4513"
+          emissiveIntensity={0.5}
+        />
+      </Box>
+      <Box args={[0.3, 0.3, 0.3]} position={[4, -1.35, -4]}>
+        <meshStandardMaterial 
+          color="#8b4513"
+          metalness={0.8}
+          roughness={0.2}
+          emissive="#8b4513"
+          emissiveIntensity={0.5}
+        />
+      </Box>
+    </group>
+  )
+}
 
 function CuboneModel() {
   const { scene } = useGLTF('/models/cubone.glb')
@@ -41,8 +137,8 @@ export default function Cubone() {
                 <pointLight position={[0, 5, 0]} intensity={0.5} color="#8b4513" />
 
                 <Suspense fallback={null}>
+                  <Scene />
                   <CuboneModel />
-                  <CuboneBase /> {/* Base horizontal */}
                   <DustParticles />
                 </Suspense>
 
