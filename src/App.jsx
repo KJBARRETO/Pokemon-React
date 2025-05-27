@@ -1,4 +1,3 @@
-// src/App.jsx
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -7,12 +6,13 @@ import Cubone from './components/Cubone'
 import Mew from './components/Mew'
 import Pikachu from './components/Pikachu'
 import Game from './components/Game'
+import './App.css'
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Header />
-      <main>
+      <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cubone" element={<Cubone />} />
@@ -22,7 +22,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
